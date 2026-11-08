@@ -128,14 +128,15 @@ def contact_page():
       <li><strong>Need help with a real order from another store?</strong> Contact that store directly. Our guide to <a href="guides/package-delivered-not-received.html">missing packages</a> explains what to do.</li>
     </ul>
     <h2>How to reach us</h2>
-    <p>The best way to reach us is to open an issue on our public project page: <a href="https://github.com/divebombdom/neverships/issues" rel="noopener">github.com/divebombdom/neverships/issues</a>. Use it for:</p>
+    <p class="contact-email">Email us at <a href="mailto:ratgalactic@gmail.com?subject=NeverShips">ratgalactic@gmail.com</a></p>
+    <p>Write to us about:</p>
     <ul>
       <li>Corrections or suggestions for our shopping guides.</li>
       <li>Bug reports and accessibility problems.</li>
       <li>Ideas for new fake products or real guides.</li>
-      <li>Press and partnership questions.</li>
+      <li>Privacy questions, press, and partnership inquiries.</li>
     </ul>
-    <p>Please don't include personal information like your address, phone number, or payment details. Messages posted there are public.</p>
+    <p>Please don't send payment details or other sensitive information. You can also report bugs publicly on our <a href="https://github.com/divebombdom/neverships/issues" rel="noopener">GitHub project page</a>.</p>
     <h2>Advertising</h2>
     <p>Ads on NeverShips are served by Google AdSense. We don't sell ad space directly. You can read how ads and cookies work on this site in our <a href="privacy.html">privacy policy</a>.</p>
   </main>

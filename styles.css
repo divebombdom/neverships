@@ -374,3 +374,4 @@ legend { font-family: var(--font-mono); font-size: var(--text-xs); text-transfor
 @media (max-width: 640px) { .page-nav { display: none; } .page-nav + .cart-btn { margin-left: auto; } }
 .all-guides { color: var(--accent); font-weight: 700; text-decoration: none; white-space: nowrap; }
 .guide-grid .guide h3, .related .guide h3 { font-family: var(--font-display); font-size: var(--text-lg); font-weight: 800; }
+.contact-email { font-size: var(--text-lg); font-weight: 700; padding: 1rem 1.25rem; border: 2px solid var(--ink, #17160f); background: #fff; overflow-wrap: anywhere; }
