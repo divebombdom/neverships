@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="google-adsense-account" content="ca-pub-7804394701272579" />
+  <title>NeverShips — The tech store where nothing ever arrives</title>
+  <meta name="description" content="A parody tech store. Add phones, GPUs, and gadgets to your cart, check out for $0, track the package, and enjoy the fact that it never comes. Nothing is sold here." />
+  <meta property="og:title" content="NeverShips — Add to cart. Never unbox." />
+  <meta property="og:description" content="The parody tech store where your order never arrives and you never pay." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="config.js"></script>
+  <script src="ads.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>FREE SHIPPING ON ALL ORDERS (SHIPPING NOT INCLUDED)</span>
+      <span>0 PACKAGES DELIVERED SINCE LAUNCH</span>
+      <span>100% OFF EVERYTHING, ALWAYS</span>
+      <span>NO REAL PAYMENTS, EVER — THIS IS A PARODY</span>
+      <span>FREE SHIPPING ON ALL ORDERS (SHIPPING NOT INCLUDED)</span>
+      <span>0 PACKAGES DELIVERED SINCE LAUNCH</span>
+      <span>100% OFF EVERYTHING, ALWAYS</span>
+      <span>NO REAL PAYMENTS, EVER — THIS IS A PARODY</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a href="index.html" class="brand" aria-label="NeverShips home">
+        <span class="brand-word">Never<span>Ships</span></span>
+        <span class="brand-tag">tech that never comes</span>
+      </a>
+      <div class="deliver-to">
+        <i data-lucide="map-pin" aria-hidden="true"></i>
+        <div>
+          <span class="mono small muted">SHIP TO · YOUR DESK</span>
+          <strong>Arrives: never</strong>
+        </div>
+      </div>
+      <label class="search">
+        <span class="sr-only">Search products</span>
+        <i data-lucide="search" aria-hidden="true"></i>
+        <input id="search" type="search" placeholder="Search things you'll never own" autocomplete="off" />
+      </label>
+      <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+        <i data-lucide="shopping-cart" aria-hidden="true"></i>
+        <span>Cart</span>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="wrap"><div class="ad-slot" data-ad="top" data-format="horizontal"></div></div>
+
+  <main id="main">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow mono">A parody store · nothing here can be bought</p>
+        <h1>Add to cart.<br/><em>Never unbox.</em></h1>
+        <p class="lede">Shop the latest phones, GPUs, and gadgets. Check out with our pre-filled fake card. Track your package mile by mile. Then wait for a delivery that is never, ever coming. You pay $0. You receive 0.</p>
+        <div class="hero-ctas">
+          <a href="#shop" class="btn btn-primary">Start shopping <i data-lucide="arrow-down" aria-hidden="true"></i></a>
+          <a href="#how" class="btn btn-ghost">How it works</a>
+        </div>
+      </div>
+      <aside class="stats-card" aria-label="Your NeverShips stats">
+        <div class="label-head mono">
+          <span>PACKING SLIP</span><span id="slipNo">#NS-000000</span>
+        </div>
+        <dl class="stats">
+          <div><dt>Imaginary money spent</dt><dd id="statSpent">$0</dd></div>
+          <div><dt>Orders placed</dt><dd id="statOrders">0</dd></div>
+          <div><dt>Packages received</dt><dd class="stamp-zero">0</dd></div>
+          <div><dt>Real money charged</dt><dd>$0.00</dd></div>
+        </dl>
+        <div class="barcode" aria-hidden="true"></div>
+        <p class="mono small muted">Stats are saved only in your browser.</p>
+      </aside>
+    </section>
+
+    <section class="deals wrap" id="deals" aria-labelledby="dealsTitle">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow mono">Lightning deals</p>
+          <h2 id="dealsTitle">Up to 60% off things that don't exist</h2>
+        </div>
+        <div class="countdown" aria-live="polite">
+          <span class="mono small muted">NEXT DROP IN</span>
+          <span class="mono big" id="dealTimer">01:00</span>
+        </div>
+      </div>
+      <div class="deal-row" id="dealRow"></div>
+      <p class="mono small muted">Everyone sees the same deals at the same time. Deals rotate every 75 seconds.</p>
+    </section>
+
+    <div class="wrap"><div class="ad-slot" data-ad="deals" data-format="horizontal"></div></div>
+
+    <section class="shop wrap" id="shop" aria-labelledby="shopTitle">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow mono">The catalog</p>
+          <h2 id="shopTitle">Everything in stock. Nothing in reality.</h2>
+        </div>
+        <label class="sort">
+          <span class="mono small muted">SORT</span>
+          <select id="sort">
+            <option value="featured">Featured</option>
+            <option value="low">Price: low to high</option>
+            <option value="high">Price: high to low</option>
+            <option value="rating">Top rated</option>
+          </select>
+        </label>
+      </div>
+      <nav class="cats" id="cats" aria-label="Categories"></nav>
+      <div class="grid" id="grid"></div>
+      <p class="empty" id="empty" hidden>No results. Which, honestly, is on brand.</p>
+    </section>
+
+    <section class="how wrap" id="how" aria-labelledby="howTitle">
+      <p class="eyebrow mono">How it works</p>
+      <h2 id="howTitle">The full online shopping rush, minus the shopping.</h2>
+      <ol class="how-steps">
+        <li class="how-big">
+          <span class="mono step-no">01</span>
+          <h3>Fill the cart</h3>
+          <p>Pick storage, colors, and extended warranties. Watch the total climb past what you'd ever actually spend. That's the part that feels good.</p>
+        </li>
+        <li>
+          <span class="mono step-no">02</span>
+          <h3>"Pay" in one tap</h3>
+          <p>The checkout uses a pre-filled demo card. There are no real card fields, no accounts, and no charges. We can't take your money even if you begged.</p>
+        </li>
+        <li>
+          <span class="mono step-no">03</span>
+          <h3>Track the package</h3>
+          <p>Follow it from warehouse to doorstep in real time. When it says delivered, your driver calls with an update you won't love.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="faq wrap" id="faq" aria-labelledby="faqTitle">
+      <h2 id="faqTitle">Questions</h2>
+      <details><summary>Is this a real store?</summary><p>No. NeverShips is a parody. No products exist, no payments are taken, and nothing is shipped. All brand and product names are fictional.</p></details>
+      <details><summary>Will I be charged?</summary><p>Never. The checkout has no real payment fields. It only uses a pre-filled fake card and sends nothing anywhere.</p></details>
+      <details><summary>Where does my data go?</summary><p>Your cart, orders, and stats stay in a small cookie in your browser. Clear your browser data and they disappear, just like your package. See the <a href="privacy.html">privacy policy</a> for details about ads and cookies.</p></details>
+      <details><summary>Why are there ads?</summary><p>Ads keep the lights on. They're the only real thing on this site, and they're clearly labeled as advertisements.</p></details>
+      <details><summary>My package says delivered. Where is it?</summary><p>Please check your front door. Then check it again. Then accept that it was never coming.</p></details>
+    </section>
+
+    <section class="guides wrap" aria-labelledby="guidesTitle">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow mono">Real advice, for once</p>
+          <h2 id="guidesTitle">Shopping guides that actually help</h2>
+        </div>
+      </div>
+      <div class="guide-list">
+        <a class="guide" href="guides.html#fake-deals"><span class="mono small muted">GUIDE 01</span><h3>How to spot a fake tech deal</h3><p>Seven red flags that a too-good-to-be-true listing is exactly that.</p></a>
+        <a class="guide" href="guides.html#tracking"><span class="mono small muted">GUIDE 02</span><h3>What to do when a real package says delivered but isn't</h3><p>A step-by-step checklist for carriers, sellers, and card disputes.</p></a>
+        <a class="guide" href="guides.html#impulse"><span class="mono small muted">GUIDE 03</span><h3>The 48-hour rule for impulse gadget buys</h3><p>Why sitting in a fake cart for a while is a pretty good idea.</p></a>
+      </div>
+    </section>
+
+    <div class="wrap"><div class="ad-slot" data-ad="footer" data-format="horizontal"></div></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <span class="brand-word">Never<span>Ships</span></span>
+        <p class="small muted">A parody website for entertainment. Not a store. No products are sold, no payments are processed, and no items are shipped. All brands and products named are fictional and not affiliated with any real company.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="about.html">About</a>
+        <a href="guides.html">Guides</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="#" id="resetStats">Reset my stats</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Product modal -->
+  <dialog class="modal" id="productModal" aria-labelledby="pmTitle">
+    <form method="dialog" class="modal-inner" id="productForm"></form>
+  </dialog>
+
+  <!-- Cart drawer -->
+  <div class="drawer-scrim" id="scrim" hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer-head">
+      <h2>Your cart</h2>
+      <button class="icon-btn" id="closeCart" aria-label="Close cart"><i data-lucide="x" aria-hidden="true"></i></button>
+    </div>
+    <div class="drawer-body" id="cartItems"></div>
+    <div class="drawer-foot" id="cartFoot"></div>
+  </aside>
+
+  <!-- Checkout -->
+  <dialog class="modal" id="checkoutModal" aria-labelledby="coTitle">
+    <div class="modal-inner" id="checkoutInner"></div>
+  </dialog>
+
+  <!-- Tracker -->
+  <dialog class="modal modal-wide" id="trackModal" aria-labelledby="trTitle">
+    <div class="modal-inner" id="trackInner"></div>
+  </dialog>
+
+  <!-- Driver call -->
+  <div class="call" id="call" hidden role="dialog" aria-modal="true" aria-labelledby="callName"></div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <script src="storage.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
